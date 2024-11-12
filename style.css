@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+  }
+
+  body {
+    background: rgb(2, 0, 36);
+    background: linear-gradient(172deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 53%, rgb(36, 1, 234) 100%, rgba(0, 212, 255, 1) 100%);
+    display: flex;
+    align-content: center;
+    width: auto;
+    height: auto;
+    justify-content: center;
+    color: white;
+  }
+
+  /* Main Container */
+  .container {
+    text-align: center;
+    margin-top: 20px;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    max-width: 800px;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    box-shadow: 0px 0px 20px rgb(255, 255, 255);
+    animation: slideIn 1s ease-in-out;
+    backdrop-filter: blur(10px);
+  }
+
+  /* Title */
+  .title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: rgb(241, 241, 61);
+    animation: fadeIn 1.5s ease-in-out;
+  }
+
+  /* Subtitle */
+  .subtitle {
+    font-size: 1.2rem;
+    color: #cbd5e1;
+    margin: 10px 0 20px;
+    animation: fadeIn 1.5s ease-in-out;
+  }
+
+  /* Feature List */
+  .features {
+    list-style: none;
+    margin-bottom: 2rem;
+    animation: fadeInUp 1.5s ease-in-out;
+  }
+
+  .features li {
+    font-size: 1.1rem;
+    padding: 8px 0;
+  }
+
+  /* Button Container */
+  .button-container {
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    width: 20rem;
+    cursor: pointer;
+    background: linear-gradient(90deg, #9333EA, #3B82F6);
+    padding: 0.75rem 1.5rem;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: transform 0.2s ease, box-shadow 0.2s linear;
+    animation: fadeInUp 2s ease-in-out;
+  }
+
+  .button-container:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+  }
+
+  .button-container:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 200%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0));
+    transition: 0.4s;
+  }
+
+  .button-container:hover:after {
+    left: 100%;
+  }
+
+  /* Keyframe Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateY(-50px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .wrapper {
+    display: flex;
+    max-width: 750px;
+    width: 100%;
+    height: 400px;
+    background: transparent;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-radius: 12px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  i.button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 46px;
+    width: 46px;
+    background-color: #000000;
+    border-radius: 20%;
+    text-align: center;
+    padding: 1em;
+    color: #fff;
+    font-size: 15px;
+    transition: all 0.3s ease-out;
+    cursor: pointer;
+  }
+
+  i#prev {
+    left: 1em;
+  }
+
+  i#next {
+    right: 1em;
+
+  }
+
+
+  .image-container {
+    height: 320px;
+    max-width: 500px;
+    box-shadow: 3px 3px 20px black;
+    border-radius: 18px;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .carousel {
+    display: flex;
+    height: 100%;
+    border-radius: 18px;
+    width: 100%;
+
+    transition: all 0.4s ease;
+  }
+  .para{
+    font-size: large;
+    font-family: "Poppins", sans-serif;
+    text-align: left;
+  }
+  img {
+    height: 100%;
+    width: 100%;
+    border-radius: 18px;
+    object-fit: cover;
+  }
